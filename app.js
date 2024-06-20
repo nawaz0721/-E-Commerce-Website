@@ -117,7 +117,7 @@ let product =[
         "originalPrice": 84999,
         "priceAfterDiscount": 79999,
         "discountPercentage": 5,
-        "image": "images/mobile/A53.PNG"
+        "image": "images/mobile/A 53.jpeg"
       },
       {
         "brandName": "Samsung",
@@ -149,7 +149,7 @@ let product =[
         "originalPrice": 39999,
         "priceAfterDiscount": 36999,
         "discountPercentage": 7,
-        "image": "images/mobile/A12.PNG"
+        "image": "images/mobile/A 12.jpeg"
       },
       {
         "brandName": "Samsung",
@@ -157,7 +157,7 @@ let product =[
         "originalPrice": 199999,
         "priceAfterDiscount": 184999,
         "discountPercentage": 7,
-        "image": "images/mobile/galaxy-z-flip.PNG"
+        "image": "images/mobile/Z\ filp4.jpeg"
       },
       {
         "brandName": "Nokia",
@@ -229,7 +229,7 @@ let product =[
         "originalPrice": 15999,
         "priceAfterDiscount": 14999,
         "discountPercentage": 6,
-        "image": "images/mobile/2.4.PNG"
+        "image": "images/mobile/nokia\ \ 2.4.jpeg"
       },
       {
         "brandName": "Nokia",
