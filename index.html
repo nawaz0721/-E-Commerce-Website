@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price OYE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- style="display: none;" -->
+    <div id="formContainer" style="display: none;">
+        <form action="#">
+          <h2>Login</h2>
+          <div class="input-field">
+            <input type="text" required  id="email"/>
+            <label>Enter your email</label>
+          </div>
+          <div class="input-field">
+            <input type="password" required id="password" />
+            <label>Enter your password</label>
+          </div>
+          <div class="forget">
+            <label for="remember">
+              <input type="checkbox" id="remember" />
+              <p>Remember me</p>
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button onclick="userLogIn()">Submit</button>
+          <div class="register">
+            <p>Don't have an account? <a href="#">Signup</a></p>
+          </div>
+        </form>
+      </div>
+  <main id="mainContainer">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.svg" alt="Priceoye Logo">
+            </div>
+            <div class="search-bar">
+                <input type="search" placeholder="Search..." id="search">
+                <button class="search-btn"><img src="images/search.png" alt="search"></button>
+            </div>
+            <div class="auth-buttons" >
+                <button class="login-btn" id="loginBtn" onclick="login()">Log in</button>
+                <div id="logout">
+                    <img src="images/account.png"  alt="Profile Image" id="profileImage" style="display:none;">
+                    <span class="user-email" id="showEmail" style="display:none; margin-top: 8px; font-weight: bold;"></span>
+                    <button class="logout-btn" id="logoutBtn" style="display:none;" onclick="logOut()">Log Out</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <div class="categories">
+            <div class="category-item">
+                <img src="images/mobiles.svg" alt="Mobiles">
+                <span>Mobiles</span>
+            </div>
+            <div class="category-item">
+                <img src="images/wireless-earbuds.svg" alt="Wireless Earbuds">
+                <span>Wireless Earbuds</span>
+            </div>
+            <div class="category-item">
+                <img src="images/smart-watches.svg" alt="Smart Watches">
+                <span>Smart Watches</span>
+            </div>
+            <div class="category-item">
+                <img src="images/tablets.svg" alt="Tablets">
+                <span>Tablets</span>
+            </div>
+        </div>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+            <div class="slide first">
+                <img src="images/slider 1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="images/slider 2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="images/slider 3.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="images/slider 4.jpg" alt="Image 4">
+            </div>
+            <div class="slide">
+                <img src="images/slider 5.jpg" alt="Image 5">
+            </div>
+            <div class="slide">
+                <img src="images/slider 6.jpg" alt="Image 6">
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+            <label for="radio6" class="manual-btn"></label>
+        </div>
+    </div>
+    <div class="brand-section">
+        <h2>Shop by Brand</h2>
+        <div class="brand-container">
+            <div class="brand" onclick="filterByBrand('Samsung')">
+                <img src="images/samsung.svg" alt="Samsung">
+                <p>Samsung</p>
+            </div>
+            <div class="brand" onclick="filterByBrand('Apple')">
+                <img src="images/apple.svg" alt="Apple">
+                <p>Apple</p>
+            </div>
+            <div class="brand" onclick="filterByBrand('Nokia')">
+                <img src="images/nokia.svg" alt="Nokia">
+                <p>Nokia</p>
+            </div>
+            <div class="brand" onclick="filterByBrand('Vivo')">
+                <img src="images/vivo.svg" alt="Vivo">
+                <p>Vivo</p>
+            </div>
+            <div class="brand" onclick="filterByBrand('Infinix')">
+                <img src="images/infinix.svg" alt="Infinix">
+                <p>Infinix</p>
+            </div>
+        </div>
+    </div>
+    <section class="price-filter">
+        <h2>Shop by Price</h2>
+        <div class="price-buttons">
+            <button onclick="filterByPrice(20000)">Rs. 15,000 - Rs. 25,000</button>
+            <button onclick="filterByPrice(40000)">Rs. 25,000 - Rs. 40,000</button>
+            <button onclick="filterByPrice(60000)">Rs. 40,000 - Rs. 60,000</button>
+            <button onclick="filterByPrice(80000)">Rs. 60,000 - Rs. 80,000</button>
+            <button onclick="filterByPrice(100000)">Rs. 80,000 - Rs. 100,000</button>
+            <button onclick="filterByPrice(150000)">Rs. 100,000 - Rs. 150,000</button>
+            <button onclick="filterByPrice(200000)">Rs. 150,000 - Rs. 200,000</button>
+            <button onclick="filterByPrice(400000)">Rs. 200,000 - Rs. 300,000</button>
+        </div>
+    </section>
+    <section class="product-grid" id="container">
+        <!-- <div class="product-card">
+            <h2>Iphone</h2>
+            <img src="">
+            <h3>Iphone 14 pro max</h3>
+            <p class="price">Rs 299000 <span class="original-price">Rs 350000</span> <span class="discount"> 7% OFF</span></p>
+        </div> -->
+    </section>
+    <footer>
+        <p>&copy; 2024 Price OYE. All rights reserved.</p>
+    </footer>
+</main>
+    <script src="app.js"></script>
+</body>
+</html>
